@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --bg-:hsl(0, 0%, 95%);
+    --p-color: hsla(0, 0%, 100%, 0.75);
+    --col-orange: hsl(31, 77%, 52%);
+    --col-cyan:hsl(184, 100%, 22%);
+    --col-darkcyan:hsl(179, 100%, 13%);
+    --font-para:'Lexend Deca', sans-serif;
+    --font-head:'Big Shoulders Display', cursive;
+}
+main{
+    min-height: 98vh;
+    background-color: var(--bg-);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.panel{
+    max-width: 60%;
+    display: flex;
+}
+.panel div{
+    padding: 3em;
+    max-height:70vh;
+    height: 60vh;
+
+}
+p{
+    font-family: var(--font-para);
+    color: var(--p-color);
+    line-height: 1.5;
+    margin-bottom: 4em;
+}
+button{
+    margin: 3em 0;
+    height: 3em;
+    width: 70%;
+    font-size: 1em;
+    border-radius: var(--bg-);
+    border: none;
+    border-radius: 50px;
+}
+h1{
+    margin: 0.5em 0;
+    font-family: var(--font-head);
+    color: var(--bg-);
+    font-size: 3em;
+    text-transform: uppercase;
+}
+.orange{
+    background-color: var(--col-orange);
+    border-radius: 0.5em 0 0 0.5em;
+}
+.orange button{
+    color: var(--col-orange);
+}
+.cyan{
+    background-color: var(--col-cyan);
+}
+.cyan button{
+    color: var(--col-cyan);
+} 
+
+.dark_cyan{
+    background-color: var(--col-darkcyan);
+    border-radius: 0 0.5em 0.5em 0;
+}
+.dark_cyan button{
+    color: var(--col-darkcyan);
+}
+button:hover{
+    background-color: rgba(255, 255,255, 0);
+    border: 1px solid var(--bg-);
+    color:var(--bg-);
+    cursor: pointer;
+}
+@media(max-width:375px){
+     .panel{
+        flex-direction: column;
+        margin:4em 0;
+        min-width: 90%;
+    }
+    .dark_cyan{
+        border-radius: 0 0 0.5em 0.5em ;
+    }
+    .orange{
+        border-radius: 0.5em 0.5em 0 0;
+    }
+}
